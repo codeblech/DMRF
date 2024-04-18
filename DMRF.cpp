@@ -25,8 +25,8 @@ using namespace std;
 
 static vector<string> blue1, blue2, yellow, red, magenta, green1, green2, orange, violet, pink, grey;
 static int st;
-
-class name
+// sole purpose of this class is to print pretty characters on terminal with a (kind of) animation. it delays the printing of each line by some amount of time.
+class PrettyPrint
 {
 
     void A(int i)
@@ -395,9 +395,9 @@ class name
 
 public:
 
-    name() {}
+    PrettyPrint() {}
 
-    name(char s[])
+    PrettyPrint(char s[])
     {
         int x;
 
@@ -654,13 +654,10 @@ void delay(int msecs)
 
 }
 
+// update this to use std::find
 int get_index(vector<string> v, string s)
 {
-
-    int i = 0;
-    int x = v.size();
-
-    for (int i = 0; i < x; i++)
+    for (int i = 0; i < v.size(); i++)
     {
         if (v[i] == s)
         {
@@ -679,7 +676,7 @@ public:
     stations()
     {
 
-        name n("DMRF");
+        PrettyPrint n("DMRF");
 
         delay(300);
         system("color 0A");
@@ -894,7 +891,7 @@ public:
         }
     }
 
-    int no_of_stations(string x, string w)
+    int no_of_stations(string allcapsStartingStationName, string allcapsEndingStationName)
     {
         int ind1[11];
         string c1[11];
@@ -914,94 +911,94 @@ public:
         int y;
         int j = 0;
 
-        y = get_index(blue1, x);
+        y = get_index(blue1, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(blue2, x);
+        y = get_index(blue2, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(green1, x);
+        y = get_index(green1, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(green2, x);
+        y = get_index(green2, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(yellow, x);
+        y = get_index(yellow, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(red, x);
+        y = get_index(red, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(magenta, x);
+        y = get_index(magenta, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(orange, x);
+        y = get_index(orange, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(violet, x);
+        y = get_index(violet, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(grey, x);
+        y = get_index(grey, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
-        y = get_index(pink, x);
+        y = get_index(pink, allcapsStartingStationName);
         ind1[j] = y;
         j++;
 
         int ind2[11];
         j = 0;
 
-        y = get_index(blue1, w);
+        y = get_index(blue1, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(blue2, w);
+        y = get_index(blue2, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(green1, w);
+        y = get_index(green1, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(green2, w);
+        y = get_index(green2, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(yellow, w);
+        y = get_index(yellow, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(red, w);
+        y = get_index(red, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(magenta, w);
+        y = get_index(magenta, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(orange, w);
+        y = get_index(orange, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(violet, w);
+        y = get_index(violet, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(grey, w);
+        y = get_index(grey, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
-        y = get_index(pink, w);
+        y = get_index(pink, allcapsEndingStationName);
         ind2[j] = y;
         j++;
 
@@ -1104,8 +1101,8 @@ public:
 
                     int p1, p2;
                     int a, b;
-                    p1 = get_index(v1, x);
-                    p2 = get_index(v2, w);
+                    p1 = get_index(v1, allcapsStartingStationName);
+                    p2 = get_index(v2, allcapsEndingStationName);
 
                     if (p1 > intersect1)
                     {
