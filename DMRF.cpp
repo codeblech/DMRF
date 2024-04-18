@@ -645,6 +645,7 @@ vector<string> convert(string s)
 
 }
 
+// change this function to use a function that is not cpu intensive. this is currently a busy-wait loop
 void delay(int msecs)
 {
 
@@ -678,77 +679,77 @@ public:
 
         PrettyPrint n("DMRF");
 
-        delay(300);
-        system("color 0A");
+        // delay(300);
+        // system("color 0A");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        // {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //     for(int j=0;j<10000;j++)
+        //     {
 
-                    }
-                }
+        //     }
+        // }
 
-        delay(300);
-        system("color 0B");
+        // delay(300);
+        // system("color 0B");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        //         {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //             for(int j=0;j<10000;j++)
+        //             {
 
-                    }
-                }
+        //             }
+        //         }
 
-        delay(300);
-        system("color 0C");
+        // delay(300);
+        // system("color 0C");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        //         {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //             for(int j=0;j<10000;j++)
+        //             {
 
-                    }
-                }
+        //             }
+        //         }
 
-        delay(300);
-        system("color 0D");
+        // delay(300);
+        // system("color 0D");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        //         {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //             for(int j=0;j<10000;j++)
+        //             {
 
-                    }
-                }
+        //             }
+        //         }
 
-        delay(300);
-        system("color 0E");
+        // delay(300);
+        // system("color 0E");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        //         {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //             for(int j=0;j<10000;j++)
+        //             {
 
-                    }
-                }
+        //             }
+        //         }
 
-        delay(300);
-        system("color 0F");
+        // delay(300);
+        // system("color 0F");
 
-        for(int i=0;i<10000;i++)
-                {
+        // for(int i=0;i<10000;i++)
+        //         {
 
-                    for(int j=0;j<10000;j++)
-                    {
+        //             for(int j=0;j<10000;j++)
+        //             {
 
-                    }
-                }
+        //             }
+        //         }
 
         string s;
         ifstream f;
