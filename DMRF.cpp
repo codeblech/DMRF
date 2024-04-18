@@ -1258,18 +1258,18 @@ int main()
     cout<<"-------------"<<endl;
     cout<<endl;
 
-    string a, b, x, w;
+    string startingStationName, endingStationName, x, w;
 
     cout<<"Enter Starting Station: ";
-    getline(cin>>ws,a);
+    getline(cin >> ws, startingStationName); // ws discards whitespaces, the whitespace in the middle stay there
     cout<<endl;
 
     cout<<"Enter Ending Station: ";
-    getline(cin>>ws,b);
+    getline(cin>>ws,endingStationName);
     cout<<endl;
 
-    x=capitalize(a);
-    w=capitalize(b);
+    x=capitalize(startingStationName);
+    w=capitalize(endingStationName);
 
     class time t;
     class fare f;
