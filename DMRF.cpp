@@ -677,7 +677,7 @@ public:
     stations()
     {
 
-        PrettyPrint n("DMRF");
+        PrettyPrint printObject("DMRF");
 
         // delay(300);
         // system("color 0A");
@@ -751,110 +751,110 @@ public:
         //             }
         //         }
 
-        string s;
+        string stationNameBuffer;
         ifstream f;
 
         /*blue1*/
         f.open("blue1.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            blue1.push_back(s);
+            blue1.push_back(stationNameBuffer);
         }
         f.close();
 
         /*blue2*/
         f.open("blue2.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            blue2.push_back(s);
+            blue2.push_back(stationNameBuffer);
         }
         f.close();
 
         /*yellow*/
         f.open("yellow.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            yellow.push_back(s);
+            yellow.push_back(stationNameBuffer);
         }
         f.close();
 
         /*green1*/
         f.open("green1.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            green1.push_back(s);
+            green1.push_back(stationNameBuffer);
         }
         f.close();
 
         /*green2*/
         f.open("green2.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            green2.push_back(s);
+            green2.push_back(stationNameBuffer);
         }
         f.close();
 
         /*red*/
         f.open("red.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            red.push_back(s);
+            red.push_back(stationNameBuffer);
         }
         f.close();
 
         /*magenta*/
         f.open("magenta.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            magenta.push_back(s);
+            magenta.push_back(stationNameBuffer);
         }
         f.close();
 
         /*orange*/
         f.open("orange.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            orange.push_back(s);
+            orange.push_back(stationNameBuffer);
         }
         f.close();
 
         /*violet*/
         f.open("violet.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            violet.push_back(s);
+            violet.push_back(stationNameBuffer);
         }
         f.close();
 
         /*pink*/
         f.open("pink.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            pink.push_back(s);
+            pink.push_back(stationNameBuffer);
         }
         f.close();
 
         /*grey*/
         f.open("grey.txt", ios::in);
 
-        while (getline(f, s))
+        while (getline(f, stationNameBuffer))
         {
-            grey.push_back(s);
+            grey.push_back(stationNameBuffer);
         }
         f.close();
     }
 
-    void colo(string s)
+    void systemColorCode(string s)
     {
         if (s == "blue1" || s == "blue2")
         {
@@ -1012,7 +1012,7 @@ public:
                 vector<string> v1;
                 v1 = convert(c1[i]);
 
-                colo(c1[i]);
+                // systemColorCode(c1[i]);
 
                 if (ind1[i] > ind2[i])
                 {
@@ -1125,7 +1125,7 @@ public:
                         b = intersect2 - p2;
                     }
 
-                    colo(line1[j]);
+                    // systemColorCode(line1[j]);
 
                     if (p1 < intersect1)
                     {
@@ -1163,7 +1163,7 @@ public:
                         }
                     }
 
-                    colo(line2[j]);
+                    // systemColorCode(line2[j]);
 
                     if (p2 > intersect2)
                     {
