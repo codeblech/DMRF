@@ -1258,7 +1258,7 @@ int main()
     cout<<"-------------"<<endl;
     cout<<endl;
 
-    string startingStationName, endingStationName, x, w;
+    string startingStationName, endingStationName, allcapsStartingStationName, allcapsEndingStationName;
 
     cout<<"Enter Starting Station: ";
     getline(cin >> ws, startingStationName); // ws discards whitespaces, the whitespace in the middle stay there
@@ -1268,28 +1268,28 @@ int main()
     getline(cin>>ws,endingStationName);
     cout<<endl;
 
-    x=capitalize(startingStationName);
-    w=capitalize(endingStationName);
+    allcapsStartingStationName=capitalize(startingStationName);
+    allcapsEndingStationName=capitalize(endingStationName);
 
     class time t;
     class fare f;
 
-    cout<<"Route for going from "<<x<<" to "<<w<<": "<<endl;
+    cout<<"Route for going from "<<allcapsStartingStationName<<" to "<<allcapsEndingStationName<<": "<<endl;
     cout<<endl;
 
-    int st = s.no_of_stations(x, w);
+    int st = s.no_of_stations(allcapsStartingStationName, allcapsEndingStationName);
     st=neg_to_pos(st);
 
     cout<<endl;
     cout<<"Number Of Stations: "<<st<<endl;
     cout<<endl;
 
-    int Fare = f.total_fare(x, w);
+    int Fare = f.total_fare(allcapsStartingStationName, allcapsEndingStationName);
 
     cout<<"Total Fare: "<<Fare<<endl;
     cout<<endl;
 
-    int Time = t.total_time(x, w);
+    int Time = t.total_time(allcapsStartingStationName, allcapsEndingStationName);
     minsec(Time);
 
     cout<<"---------------------"<<endl;
